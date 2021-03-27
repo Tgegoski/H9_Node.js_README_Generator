@@ -1,30 +1,19 @@
-// TODO: Include packages needed for this application
-const fs = require('inquirer');
-const utils = require('utils');
-const js_README_Generator = require('H9_Node.js_README_Generator/utils');
-const generateMarkdown = generateMarkdown('any');
-
-// TODO: Create an array of questions for user input
-const promptUser = require('prompts');
+// Packages needed for this application
 const inquirer = require('inquirer');
-const questions = [""]
+const fs = require('fs');
 
-(async () => {
-    const response = await prompts(questions) 
-    }
-)
-
+//User Questions
 inquirer
     .prompt([
         {
             type: 'input',
-            name: 'project',
+            name: 'title',
             message: 'What is your projects name?',
         },
         {
             type: 'input',
             message: 'Please write a short description of your project?',
-            name: 'info',
+            name: 'description',
         },
         {
             type: 'list',
@@ -52,42 +41,43 @@ inquirer
             message: 'What does the user need to know about contributing to the repo?',
             name: 'contribute',
         },
-    ])
-    .then(answers => {
-        Response.confirm === Response.answers
-            console.log('response');
-    })
-    .catch(error => {
-        if(error.isError) {
-    }   else {
+    ]
+).then(({
+    title,
+    description,
+    liscense,
+    command,
+    test,
+    repo,
+    contribute
+})=>{
 
-    }
-    }),
+}
+)
+ 
+// Function to write README file
+    function createNewFile(title,README){
 
-// TODO: Create a function to write README file
-    function importScripts() {
-    (inquirer, data) =>  {
-    fs.writeFile(nodeModule, generateMarkdown(data),
-        function (err) {
-            if (err) {
-                return console.log(err);
+    fs.writeFile(`./${README.toLowerCase().split(' ').join(' ')}.md`,data,(err)=>{
+        if(err){
+            console.log(err)
         }
-})
-};
-    
-// TODO: Create a function to initialize app
+        console.log("Your README has been generated");
+    })
+    }
+
+// Function to initialize app
         function init() {}
             
-        function prompt(inquirer)
-            importScripts; ("inquirer"); {
+        function prompt(inquirer){
+      
             console.log(JSON.stringify)(data, null," ");
             data.getLiscense = getLiscense(data.liscense);
             writeFile("./exampleREADME.md",data);
     }
-}
 
-// Function call to initialize app
-init();
+
+
 
 
 
