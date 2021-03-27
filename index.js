@@ -1,6 +1,7 @@
 // Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 //User Questions
 inquirer
@@ -42,23 +43,18 @@ inquirer
             name: 'contribute',
         },
     ]
-).then(({
-    title,
-    description,
-    liscense,
-    command,
-    test,
-    repo,
-    contribute
-})=>{
-
+).then((
+   answers
+)=>{
+const README = generateMarkdown(answers);
+    createNewFile("README.md",README)
 }
 )
  
 // Function to write README file
     function createNewFile(title,README){
 
-    fs.writeFile(`./${README.toLowerCase().split(' ').join(' ')}.md`,data,(err)=>{
+    fs.writeFile(title,README,(err)=>{
         if(err){
             console.log(err)
         }
