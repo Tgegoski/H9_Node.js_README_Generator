@@ -19,7 +19,7 @@ function renderLicenseSection(license) {
 //Function to generate markdown for README
 const generateMarkdown = data =>
 (data.README);
-    return  '# $;{data.title}'
+    return ('');
    
 
     Contents; {

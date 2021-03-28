@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require("./utils/generatemarkdown")
-const generateREADME = generateMarkdown(answers);
+const generateREADME = generateMarkdown;
 
 //User Questions
 inquirer
@@ -54,7 +54,7 @@ inquirer
     
         createNewFile("README.md",README)
 
-        function createNewFile(README,README){
+        function createNewFile(fs,README){
 
         fs.writeFile(FileName,data,(err)=>{
             if(err){
