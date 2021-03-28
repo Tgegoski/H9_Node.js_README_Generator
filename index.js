@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const generateMarkdown = require("./utils/generatemarkdown")
-const generateREADME = generateMarkdown;
+const generateREADME = (answers);
 
 //User Questions
 inquirer

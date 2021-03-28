@@ -18,11 +18,9 @@ function renderLicenseSection(license) {
 
 //Function to generate markdown for README
 const generateMarkdown = data =>
-(data.README);
-    return ('');
+    (data.README)
    
-
-    Contents; {
+     README;    {
     [Title](Title)
     [Description](Description)
     [Liscense](liscense)
@@ -32,19 +30,19 @@ const generateMarkdown = data =>
     [Contribution](contribution)
     
     Title
-    $;{data.title}
+    $;{answers.title}
     Description
-    $;{data.description}
+    $;{answers.description}
     License
-    $;{data.license}
+    $;{answers.license}
      Installation
-    $;{data.Install}
+    $;{answers.Install}
     Test
-    $;{data.test}
+    $;{answers.test}
     Instructions
-    $;{data.Instructions}
+    $;{answers.Instructions}
      Contribution
-    $;{data.Contribute}
+    $;{answers.Contribute}
         
     Contact
     GitHub :$;{git}
