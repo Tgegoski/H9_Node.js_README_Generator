@@ -17,39 +17,39 @@ function renderLicenseSection(license) {
 }
 
 //Function to generate markdown for README
-const generateMarkdown = data =>
-    (data.README)
+let generateMarkdown = generateReadme =>
+    function (data) {
    
-     README;    {
-    [Title](Title)
-    [Description](Description)
-    [Liscense](liscense)
-    [Installation](installation)
-    [Test](test)
-    [Instuctions](Instructions)
-    [Contribution](contribution)
+    //  let generateREADME  = {
+
+    // '#[Title](Title)':
+    // '#[Description](Description)',
+    // '#[Liscense](liscense)':
+    // '#[Installation](installation)',
+    // [Test](test)
+    // [Instuctions](Instructions)
+    // [Contribution](contribution)
     
-    Title
-    $;{answers.title}
-    Description
-    $;{answers.description}
-    License
-    $;{answers.license}
-     Installation
-    $;{answers.Install}
-    Test
-    $;{answers.test}
-    Instructions
-    $;{answers.Instructions}
-     Contribution
-    $;{answers.Contribute}
+    // Title
+    // console.log(`data,${title}`),
+    // Description
+    // $;{data.description}
+    // License
+    // $;{data.license}
+    //  Installation
+    // $;{data.Install}
+    // Test
+    // $;{data.test}
+    // Instructions
+    // $;{data.Instructions}
+    //  Contribution
+    // $;{data.Contribute}
         
-    Contact
-    GitHub :$;{git}
-    Email :$;{email}
-    }
-{
+    // Contact
+    // GitHub :$;{git}
+    // Email :$;{email}
+    // }
+
 
 module.exports = generateMarkdown; 
-
-}
+    }
